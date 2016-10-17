@@ -1,0 +1,22 @@
+{
+    "802.11 auth": " open", 
+    "BSSID": " 0:1a:1e:a0:73:c9", 
+    "MCS": " -1", 
+    "SSID": " wpa.mcgill.ca", 
+    "agrCtlNoise": " -98", 
+    "agrCtlRSSI": " -53", 
+    "agrExtNoise": " 0", 
+    "agrExtRSSI": " 0", 
+    "channel": " 157", 
+    "lastAssocStatus": " 0", 
+    "lastTxRate": " 54", 
+    "link auth": " wpa2", 
+    "maxRate": " 54", 
+    "op mode": " station", 
+    "state": " running", 
+    "users_connected": [
+        {
+            "142.157.39.255": 0
+        }
+    ]
+}
