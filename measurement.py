@@ -59,7 +59,7 @@ def _get_access_points(dateandtime,location):
     try:
         wpa_mcgill_results = [result for result in results if result[0]=='wpa.mcgill.ca'] # remove results that aren't wpa.mcgill.ca
     except IndexError as e:
-        []
+        pass
 
     if not wpa_mcgill_results:
         return False
@@ -73,8 +73,8 @@ def _get_access_points(dateandtime,location):
 
 def get_access_points(dateandtime,location):
     '''
-    
-    The airport tool fails if used multiple times in a short period of time. One way around this is 
+
+    The airport tool fails if used multiple times in a short period of time. One way around this is
     to try using multiple times. An attempt is made once every second. If the attempt doesn't work after
     number of attempts time, the user will be prompted to try again.
 
@@ -89,7 +89,7 @@ def get_access_points(dateandtime,location):
 
 def get_users_connected():
     '''
-    
+
     This method will determine the number of devices that are currently connected to a network using ping and arp.
     First the program will automatically detect all of your interfaces and check for interfaces on MAC osx for WIFI (en0 and en1).
     Then it will attempt to get the network address and then send a broadcast ping to all devices. This should update the local ARP
@@ -105,7 +105,6 @@ def get_users_connected():
                     broadcast_addresses.append(item['broadcast'])
             except IndexError as e:
                 print("No broadcast found on this interface")
-
 
     users_connected = []
     for address in broadcast_addresses:
